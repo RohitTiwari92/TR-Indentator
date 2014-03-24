@@ -1,0 +1,114 @@
+﻿<Window x:Class="WpfApplication18.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="400" Width="525" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="WhiteSmoke" BorderBrush="DarkGray" BorderThickness="2" SizeToContent="Manual">
+    <Window.Resources>
+        <Style x:Key="style1" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Image  Name="IMG" Source="/WpfApplication18;component/Images/close11.png" Height="20" >
+                            
+                        </Image>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter TargetName="IMG" Property="Source" Value="/WpfApplication18;component/Images/close9.png"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="style2" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                            <Rectangle Name="rec" Stroke="Black" Fill="White" StrokeThickness="1.5" Height="5" Grid.Column="1" Margin="0,23,0,6" />
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter TargetName="rec" Property="Fill" Value="Black"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="style3" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border Name="DSF" Background="LightGray">
+                                <Border.Effect>
+                                    <DropShadowEffect  ShadowDepth="1.5" BlurRadius="2.5"></DropShadowEffect>
+                                </Border.Effect>
+                                <Rectangle StrokeThickness="0.5" Stroke="DarkGray" Width="80" Name="rec" Fill="LightGray"/>
+                            </Border>
+                            <TextBlock Name="t" Text="{TemplateBinding Content}"  VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontSize="16" TextWrapping="Wrap"/>                            
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter TargetName="rec" Property="Fill" Value="#B5A9A9A9"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter TargetName="rec" Property="Fill" Value="Gray"/>
+                                <Setter TargetName="t" Property="Foreground" Value="WhiteSmoke"/>
+                                <Setter TargetName="t" Property="FontWeight" Value="SemiBold"/>
+                                    <Setter Property="Effect" TargetName="DSF" >
+                                        <Setter.Value>
+                                            <DropShadowEffect ShadowDepth="0" BlurRadius="0"/>
+                                        </Setter.Value>
+                                    </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2.2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.ColumnSpan="3" Fill="WhiteSmoke" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"></Rectangle>  
+            <Button Style="{StaticResource style1}" Grid.Column="2" Click="Button_Click"></Button>
+            <Button Style="{StaticResource style2}" Grid.Column="1" Click="Button_Click_1"></Button>
+        </Grid>
+        
+        <TextBlock Foreground="#FFA3A1A1" FontSize="42" Grid.Row="1" Margin="71,0,-71,0">TR-Indentator</TextBlock>
+        <Line Grid.Row="1" X1="334" X2="334" Y1="10" Y2="60" Stroke="Gray" StrokeThickness="0.3"/>
+        <Line Grid.Row="1" X1="50" X2="470" Y1="60" Y2="60" Stroke="Gray" StrokeThickness="0.4"/>
+        <TextBlock Foreground="#FFA3A1A1" Grid.Row="1" Margin="340,18,-340,-18">A software <LineBreak/>that indents for you</TextBlock>
+        <StackPanel Grid.Row="2"   Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Click="Button_Click_2" Style="{StaticResource style3}" Margin="0,0,0,0">Browse</Button>
+            <Button Style="{StaticResource style3}" Margin="30,0,0,0" Click="Button_Click_3" Height="37" VerticalAlignment="Bottom">Save</Button>
+            <Button Style="{StaticResource style3}" Margin="30,0,0,0" Click="Button_Click_5">Save As</Button>
+            <Button Style="{StaticResource style3}"  Margin="30,0,0,0" Click="Button_Click_4">Indent</Button>
+        </StackPanel>
+
+
+        <Border Height="210" Width="492"  BorderBrush="#C7A9A9A9" BorderThickness="2"  Grid.Row="4">
+
+            <ScrollViewer >
+                <TextBlock Foreground="Black" Background="LightGray" Name="TBox"  DragEnter="TBox_DragEnter" Drop="TBox_Drop" AllowDrop="True"  Height="Auto" Width="Auto"></TextBlock>
+            </ScrollViewer>
+        </Border>
+
+
+
+        
+        <Border Grid.Row="4" Background="#5C808080" Name="B1" AllowDrop="True" DragEnter="TBox_DragEnter" Drop="TBox_Drop" >
+        <TextBlock Name="BTB" TextAlignment="Center" FontSize="26"  Foreground="WhiteSmoke" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Height="41" Margin="79,94,79,82">.   Drag and Drop the file here    .</TextBlock>
+        </Border>
+    </Grid>
+</Window>

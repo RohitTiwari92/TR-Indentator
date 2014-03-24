@@ -1,0 +1,13 @@
+C:\Users\ROHIT\Documents\Visual Studio 2012\Projects\WpfApplication18\WpfApplication18\bin\Release\WpfApplication18.exe
+C:\Users\ROHIT\Documents\Visual Studio 2012\Projects\WpfApplication18\WpfApplication18\bin\Release\WpfApplication18.pdb
+C:\Users\ROHIT\Documents\Visual Studio 2012\Projects\WpfApplication18\WpfApplication18\obj\x86\Release\MainWindow.baml
+C:\Users\ROHIT\Documents\Visual Studio 2012\Projects\WpfApplication18\WpfApplication18\obj\x86\Release\Window1.baml
+C:\Users\ROHIT\Documents\Visual Studio 2012\Projects\WpfApplication18\WpfApplication18\obj\x86\Release\MainWindow.g.cs
+C:\Users\ROHIT\Documents\Visual Studio 2012\Projects\WpfApplication18\WpfApplication18\obj\x86\Release\Window1.g.cs
+C:\Users\ROHIT\Documents\Visual Studio 2012\Projects\WpfApplication18\WpfApplication18\obj\x86\Release\App.g.cs
+C:\Users\ROHIT\Documents\Visual Studio 2012\Projects\WpfApplication18\WpfApplication18\obj\x86\Release\WpfApplication18_MarkupCompile.cache
+C:\Users\ROHIT\Documents\Visual Studio 2012\Projects\WpfApplication18\WpfApplication18\obj\x86\Release\WpfApplication18.g.resources
+C:\Users\ROHIT\Documents\Visual Studio 2012\Projects\WpfApplication18\WpfApplication18\obj\x86\Release\WpfApplication18.Properties.Resources.resources
+C:\Users\ROHIT\Documents\Visual Studio 2012\Projects\WpfApplication18\WpfApplication18\obj\x86\Release\WpfApplication18.csproj.GenerateResource.Cache
+C:\Users\ROHIT\Documents\Visual Studio 2012\Projects\WpfApplication18\WpfApplication18\obj\x86\Release\WpfApplication18.exe
+C:\Users\ROHIT\Documents\Visual Studio 2012\Projects\WpfApplication18\WpfApplication18\obj\x86\Release\WpfApplication18.pdb
